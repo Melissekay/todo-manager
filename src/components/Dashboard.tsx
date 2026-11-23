@@ -109,13 +109,12 @@ export default function Dashboard({ onLogout }: DashboardProps) {
           <h1 className="text-lg font-bold text-slate-900">Your Tasks</h1>
           <button
             onClick={handleLogoutClick}
-            className="rounded-md bg-[#0f172a] px-3 py-1.5 bg-blue-600 py-2 text-sm font-semibold text-white"
+            className="rounded-md bg-[#0f172a] px-1.5 py-0.5 bg-blue-600 py-2 text-sm font-semibold text-white"
           >
             Log out
           </button>
         </div>
 
-        {/* Add / Edit Task Card */}
         <form
           onSubmit={handleAddOrUpdateTask}
           className="mb-6 space-y-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
@@ -126,7 +125,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             required
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs text-slate-800 outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/30"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-xs text-slate-800 outline-none focus:border-blue-500 focus:ring-2 focus:ring-green-500/30"
           />
           <input
             type="text"
@@ -140,7 +139,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
             onChange={(e) =>
               setPriority(e.target.value as "low" | "medium" | "high")
             }
-            className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-slate-800 outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/30"
+            className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-slate-800 outline-none focus:border-blue-500 focus:ring-2 focus:ring-green-500/30"
           >
             <option value="low">Low priority</option>
             <option value="medium">Medium priority</option>
@@ -162,7 +161,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                   setDescription("");
                   setPriority("medium");
                 }}
-                className="rounded-lg border border-gray-200 px-3 py-2 text-xs font-medium text-slate-600 hover:bg-gray-50"
+                className="rounded-lg border border-gray-200 px-2.5 py-2 text-xs font-medium text-slate-600 hover:bg-gray-50"
               >
                 Cancel
               </button>
@@ -198,10 +197,10 @@ export default function Dashboard({ onLogout }: DashboardProps) {
                     <span
                       className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${
                         task.priority === "high"
-                          ? "bg-red-100 text-red-600"
+                          ? "bg-green-100 text-green-600"
                           : task.priority === "medium"
                           ? "bg-amber-100 text-amber-700"
-                          : "bg-gray-100 text-gray-600"
+                          : "bg-red-100 text-red-600"
                       }`}
                     >
                       {task.priority}
