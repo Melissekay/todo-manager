@@ -28,7 +28,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-white px-4">
       <div className="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
         <h1 className="mb-5 text-xl font-semibold text-slate-900">
-          Welcome back
+          Welcome
         </h1>
 
         {error && (
@@ -52,7 +52,8 @@ export default function Login() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/30"
+              className="w-full rounded border px-3 py-2 text-sm focus:border-blue-500"
+
             />
           </div>
           <div>
@@ -74,7 +75,8 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className="w-full rounded-lg bg-[#00f060] py-2 text-sm font-semibold text-slate-900 transition hover:bg-[#00d955] focus:outline-none focus:ring-2 focus:ring-green-500/50"
+           className="w-full rounded-lg bg-blue-600 py-2 text-sm font-semibold text-white"
+
           >
             Log In
           </button>
